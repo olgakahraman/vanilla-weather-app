@@ -28,3 +28,20 @@ body {
   background: #4b0082;
   color: white;
 }
+h1 {
+  font-size: 54px;
+  transition: all 200ms ease-in-out;
+  line-height: 28px;
+  margin-top: 50px;
+  font-family: "Yeseva One", cursive;
+  text-transform: capitalize;
+}
+h1:hover {
+  color: #4b0082;
+}
+h3 {
+  transition: all 200ms ease-in-out;
+}
+h3:hover {
+  color: #4b0082;
+}
