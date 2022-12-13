@@ -52,3 +52,15 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
+function handlesubmit(event) {
+  event.preventDefault();
+  let city = document.querySelector("#city-input").value;
+  searchCity(city);
+}
+let cityForm = document.querySelector("#city-form");
+cityForm.addEventListener("submit", handlesubmit);
+
+let currentLocationButton = document.querySelector("#location-button");
+currentLocationButton.addEventListener("click", getCurrentLocation);
+
+searchCity("new york");
