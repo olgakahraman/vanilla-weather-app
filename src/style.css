@@ -154,3 +154,7 @@ button:hover {
   transform: scale(1.2);
   color: #4b0082;
 }
+footer {
+  margin-top: 20px;
+  text-align: end;
+}
