@@ -133,3 +133,24 @@ button:hover {
   background: white;
   color: #4b0082;
 }
+.city-form {
+  text-align: end;
+  top: 20px;
+  position: relative;
+}
+
+.day {
+  text-align: center;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+  font-size: 18px;
+  transition: all 200ms ease-in-out;
+}
+
+.day:hover {
+  transform: scale(1.2);
+  color: #4b0082;
+}
