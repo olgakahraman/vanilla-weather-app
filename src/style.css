@@ -1,15 +1,20 @@
 body {
   margin: 25px auto;
-  background-image: url("../images/2.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: white;
+ 
+  color: #4b0082;
   font-family: "Poppins", sans-serif;
   max-width: 600px;
 }
 .container {
   border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 10px 10px;
+  border-radius: 15px;
+ background-image: url("../images/16.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+
+
+
 }
 #city-input {
   border-radius: 20px;
@@ -29,7 +34,7 @@ body {
   color: white;
 }
 h1 {
-  font-size: 54px;
+  font-size: 38px;
   transition: all 200ms ease-in-out;
   line-height: 28px;
   margin-top: 50px;
@@ -46,15 +51,17 @@ h3:hover {
   color: #4b0082;
 }
 #temperature {
-  font-size: 74px;
+  font-size: 80px;
   font-weight: 400;
   line-height: 1;
   transition: all 200ms ease-in-out;
 }
+#main-icon i {
+  font-size: 80px;
+}
 .main-temp {
   text-align: center;
   text-transform: capitalize;
-  margin:0 auto;
 }
 .main-temp:hover {
   color: #4b0082;
@@ -62,12 +69,15 @@ h3:hover {
 }
 .units {
   position: relative;
-font-size: 16px;
+  font-size: 16px;
   top: -32px;
+}
+#min-max-temperature {
+  margin-top: 20px;
 }
 #date {
   font-size: 20px;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 a {
   color: white;
@@ -142,7 +152,7 @@ button:hover {
 .day {
   text-align: center;
   padding: 10px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
   margin: 5px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
