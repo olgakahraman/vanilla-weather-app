@@ -118,3 +118,18 @@ li:hover {
 .toggle-button:checked {
   background-color: #4b0082;
 }
+button {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 3px 9px;
+  border-radius: 100px;
+
+  transition: all 200ms ease-in-out;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+button:hover {
+  background: white;
+  color: #4b0082;
+}
