@@ -37,6 +37,10 @@ function displayWeatherCondition(response) {
   );
   document.querySelector("#temperature-description").innerHTML =
     response.data.weather[0].description;
+let mainIcon=document.querySelector("#main-icon");
+  mainIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+ 
+
 }
 function searchCity(city) {
   let apiKey = "cf6b50b908fa2e0baca3eed8a569a5f6";
@@ -62,5 +66,7 @@ cityForm.addEventListener("submit", handlesubmit);
 
 let currentLocationButton = document.querySelector("#location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+ 
 
 searchCity("new york");

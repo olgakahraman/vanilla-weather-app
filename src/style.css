@@ -8,7 +8,7 @@ body {
 .container {
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 15px;
- background-image: url("../images/16.jpg");
+ background-image: url("../images/21.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -51,13 +51,13 @@ h3:hover {
   color: #4b0082;
 }
 #temperature {
-  font-size: 80px;
+  font-size: px;
   font-weight: 400;
   line-height: 1;
   transition: all 200ms ease-in-out;
 }
-#main-icon i {
-  font-size: 80px;
+#main-icon img {
+  font-size: 10px;
 }
 .main-temp {
   text-align: center;
