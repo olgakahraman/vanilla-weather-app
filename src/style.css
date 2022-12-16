@@ -1,6 +1,6 @@
 body {
-  margin: 25px auto;
- 
+  margin: 30px auto;
+ padding:0;
   color: #4b0082;
   font-family: "Poppins", sans-serif;
   max-width: 600px;
@@ -8,13 +8,13 @@ body {
 .container {
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 15px;
- background-image: url("../images/21.jpg");
+ background-image: url("../images/17.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 
-
-
-
+}
+.temp{
+ 
 }
 #city-input {
   border-radius: 20px;
@@ -51,21 +51,24 @@ h3:hover {
   color: #4b0082;
 }
 #temperature {
-  font-size: px;
+  font-size: 64px;
   font-weight: 400;
-  line-height: 1;
+  
   transition: all 200ms ease-in-out;
 }
-#main-icon img {
-  font-size: 10px;
+#icon {
+  position:relative ;
+  top: -20px;
+  
 }
 .main-temp {
   text-align: center;
   text-transform: capitalize;
+  padding:0;
 }
 .main-temp:hover {
   color: #4b0082;
-  transform: scale(1.1);
+  
 }
 .units {
   position: relative;
@@ -73,7 +76,7 @@ h3:hover {
   top: -32px;
 }
 #min-max-temperature {
-  margin-top: 20px;
+ 
 }
 #date {
   font-size: 20px;
