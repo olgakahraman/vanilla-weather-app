@@ -123,6 +123,7 @@ li:first-letter{
   outline: none;
   cursor: pointer;
 }
+
 .toggle-button::after {
   content: "";
   position: absolute;

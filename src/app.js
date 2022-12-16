@@ -27,25 +27,24 @@ let currentTime = new Date();
 h3.innerHTML = formatDate(currentTime);
 
 function displayWeatherCondition(response) {
-  document.querySelector("#city").innerHTML = response.data.name;
+  document.querySelector("#city").innerHTML = response.data.city;
   document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
+    response.data.main.temperature
   );
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#humidity").innerHTML = response.data.temperature.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
   document.querySelector("#temperature-description").innerHTML =
-    response.data.weather[0].description;
+    response.data.condition.discription;
 
   document.querySelector("#feels-like").innerHTML = Math.round(
-    response.data.main.feels_like
+    response.data.feels_like
   );
 
   let mainIcon = document.querySelector("#icon");
   mainIcon.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    "src", "icon_url"
   );
   document.querySelector("#main-min").innerHTML = Math.round(
     response.data.main.temp_min
@@ -55,13 +54,13 @@ function displayWeatherCondition(response) {
   );
 }
 function searchCity(city) {
-  let apiKey = "cf6b50b908fa2e0baca3eed8a569a5f6";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiKey = "30tacoed7baaf2f850e321e0334cf4ed";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query={city}&key={apiKey}`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 function searchLocation(position) {
-  let apiKey = "cf6b50b908fa2e0baca3eed8a569a5f6";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  let apiKey = "30tacoed7baaf2f850e321e0334cf4ed";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon={position.coordinates.longitude}&lat={position.coordinates.latitude}&Key={apiKey}`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 function getCurrentLocation(event) {
