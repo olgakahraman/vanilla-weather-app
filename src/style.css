@@ -4,6 +4,9 @@ body {
   color: #4b0082;
   font-family: "Poppins", sans-serif;
   max-width: 600px;
+
+
+
 }
 .container {
   border: 2px solid rgba(255, 255, 255, 0.2);
@@ -34,7 +37,7 @@ body {
   color: white;
 }
 h1 {
-  font-size: 38px;
+  font-size: 30px;
   transition: all 200ms ease-in-out;
   line-height: 28px;
   margin-top: 50px;
@@ -53,7 +56,8 @@ h3:hover {
 #temperature {
   font-size: 64px;
   font-weight: 400;
-  
+  position:relative;
+  left:-15px;
   transition: all 200ms ease-in-out;
 }
 #icon {
@@ -63,8 +67,9 @@ h3:hover {
 }
 .main-temp {
   text-align: center;
-  text-transform: capitalize;
+  margin: 0;
   padding:0;
+  
 }
 .main-temp:hover {
   color: #4b0082;
@@ -74,6 +79,7 @@ h3:hover {
   position: relative;
   font-size: 16px;
   top: -32px;
+  left:-20px;
 }
 #min-max-temperature {
  
@@ -87,8 +93,10 @@ a {
   text-decoration: none;
 }
 .indicators {
-  display: block;
+  display:block;
   text-align: right;
+
+ 
 }
 li {
   font-size: 16px;
@@ -100,6 +108,9 @@ li {
 }
 li:hover {
   color: #4b0082;
+}
+li:first-letter{
+  text-transform: capitalize;
 }
 .toggle-button {
   -webkit-appearance: none;
