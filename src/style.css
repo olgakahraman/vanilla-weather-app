@@ -121,6 +121,7 @@ li:first-letter{
 .toggle-button {
   -webkit-appearance: none;
   position: relative;
+  top:40px;
   width: 50px;
   height: 30px;
   background: #ccc;
