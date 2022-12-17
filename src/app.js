@@ -48,6 +48,7 @@ function displayWeatherCondition(response) {
     "src",
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
+  celciusTemperature = response.data.temperature.current;
 }
 function searchCity(city) {
   let apiKey = "30tacoed7baaf2f850e321e0334cf4ed";
@@ -68,10 +69,39 @@ function handlesubmit(event) {
   let city = document.querySelector("#city-input").value;
   searchCity(city);
 }
+function showFahrenheitTemperature(event){
+event.preventDefault();
+let temperatureElement=document.querySelector("#temperature");
+//remove the active class the cilcius link
+celciusLink.classList.remove("active");
+fahrenheitLink.classList.add("active");
+let fahrenheitTemperature=(celciusTemperature*9) / 5 + 32;
+temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+
+}
+function showCelciusTemperature(event){
+  event.preventDefault();
+  celciusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
+}
+
+
 let cityForm = document.querySelector("#city-form");
 cityForm.addEventListener("submit", handlesubmit);
 
 let currentLocationButton = document.querySelector("#location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-searchCity("oslo");
+let celciusTemperature=null;
+
+
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
+
+let celciusLink = document.querySelector("#celcius-link");
+celciusLink.addEventListener("click", showCelciusTemperature);
+
+searchCity("istanbul");

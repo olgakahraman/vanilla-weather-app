@@ -87,8 +87,12 @@ h3:hover {
   top: -32px;
   left:-20px;
 }
-#min-max-temperature {
- 
+.main-temp .active{
+  color:#4b0082;
+  cursor: default;
+}
+.main-temp .active:hover{
+  text-decoration: none;
 }
 #date {
   font-size: 20px;

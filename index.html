@@ -57,17 +57,22 @@
         </div>
       </div>
     </div>
-   
+
     <section class="city">
       <h1 id="city"></h1>
       <h3 id="date">Sunday 14:20</h3>
       <div class="main-temp">
         <img src="" id="icon" /><strong id="temperature"></strong>
-        <span class="units">℃|<a href="#">℉</a></span>
+        <span class="units"
+          ><a href="#" id="celcius-link" class="active">℃</a>|<a
+            href="#"
+            id="fahrenheit-link"
+            >℉</a
+          ></span
+        >
       </div>
 
-        <small id="temperature-description"></small>
-
+      <small id="temperature-description"></small>
 
       <div class="row">
         <div class="col ckeckbox">
@@ -75,7 +80,6 @@
         </div>
         <div class="col indicators">
           <ul>
-           
             <li>Feels like: <span id="feels-like"></span>℃</li>
             <li>Humidity: <span id="humidity"></span>%</li>
             <li>Wind: <span id="wind"></span>km/h</li>
