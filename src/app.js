@@ -26,6 +26,36 @@ let h3 = document.querySelector("h3");
 let currentTime = new Date();
 h3.innerHTML = formatDate(currentTime);
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+   
+     <div class="col day">
+       <div class="weather-forecast-date">${day}</div>
+       <img
+         src="http://openweathermap.org/img/wn/50d@2x.png"
+         alt=""
+         width="42"
+       />
+       <div class="weather-forecast-temp">
+         <span class="weather-forecast-temp-min">10°</span>/
+         <span class="weather-forecast-temp-max"><strong>12°</strong></span>
+       </div>
+     
+   </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.city;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -48,6 +78,7 @@ function displayWeatherCondition(response) {
     "src",
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
+
   celciusTemperature = response.data.temperature.current;
 }
 function searchCity(city) {
@@ -99,5 +130,5 @@ fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 
 let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", showCelciusTemperature);
-
+displayForecast();
 searchCity("istanbul");
