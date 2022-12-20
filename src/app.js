@@ -26,18 +26,16 @@ let h3 = document.querySelector("h3");
 let currentTime = new Date();
 h3.innerHTML = formatDate(currentTime);
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.dayly);
   let forecastElement = document.querySelector("#forecast");
 
-  
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
   let forecastHTML = `<div class="row">`;
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
-      `
-   
-     <div class="col day">
+      `<div class="col day">
        <div class="weather-forecast-date">${day}</div>
        <img
          src="http://openweathermap.org/img/wn/50d@2x.png"
@@ -54,6 +52,14 @@ function displayForecast() {
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+}
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "30tacoed7baaf2f850e321e0334cf4ed";
+
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${coordinates.latitude}&lon=${coordinates.longitude}&key=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayWeatherCondition(response) {
@@ -80,6 +86,7 @@ function displayWeatherCondition(response) {
   );
 
   celciusTemperature = response.data.temperature.current;
+  getForecast(response.data.coord);
 }
 function searchCity(city) {
   let apiKey = "30tacoed7baaf2f850e321e0334cf4ed";
@@ -130,5 +137,5 @@ fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 
 let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", showCelciusTemperature);
-displayForecast();
+
 searchCity("istanbul");
