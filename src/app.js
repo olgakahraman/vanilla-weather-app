@@ -27,32 +27,48 @@ let currentTime = new Date();
 h3.innerHTML = formatDate(currentTime);
 
 function displayForecast(response) {
-  console.log(response.data.dayly);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
-  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
   let forecastHTML = `<div class="row">`;
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col day">
-       <div class="weather-forecast-date">${day}</div>
+  forecast.forEach(function (forecastDay, index) {
+    console.log(forecastDay);
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col day">
+       <div class="weather-forecast-date">${formatDay(forecastDay.time)}</div>
        <img
-         src="http://openweathermap.org/img/wn/50d@2x.png"
+         src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+           forecastDay.condition.icon
+         }.png";
          alt=""
          width="42"
        />
        <div class="weather-forecast-temp">
-         <span class="weather-forecast-temp-min">10°</span>/
-         <span class="weather-forecast-temp-max"><strong>12°</strong></span>
+         <span class="weather-forecast-temp-min">${Math.round(
+           forecastDay.temperature.minimum
+         )}°</span>/
+         <span class="weather-forecast-temp-max"><strong>${Math.round(
+           forecastDay.temperature.maximum
+         )}°</strong></span>
        </div>
      
    </div>`;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
+
+function formatDay(timesTemp) {
+  let date = new Date(timesTemp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
+
 function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "30tacoed7baaf2f850e321e0334cf4ed";
@@ -86,7 +102,7 @@ function displayWeatherCondition(response) {
   );
 
   celciusTemperature = response.data.temperature.current;
-  getForecast(response.data.coord);
+  getForecast(response.data.coordinates);
 }
 function searchCity(city) {
   let apiKey = "30tacoed7baaf2f850e321e0334cf4ed";
@@ -105,6 +121,7 @@ function getCurrentLocation(event) {
 function handlesubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input").value;
+
   searchCity(city);
 }
 function showFahrenheitTemperature(event) {
@@ -123,6 +140,17 @@ function showCelciusTemperature(event) {
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celciusTemperature);
 }
+function changeThemeByTime() {
+  let body = querySelector("body");
+  let day = new Date();
+  let night = day.getHours();
+  if (night >= 18 || night < 6) {
+    body.classList.add("dark");
+  } else {
+    body.classList.remove("dark");
+  }
+}
+
 
 let cityForm = document.querySelector("#city-form");
 cityForm.addEventListener("submit", handlesubmit);
@@ -137,5 +165,5 @@ fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 
 let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", showCelciusTemperature);
-
+changeThemeByTime();
 searchCity("istanbul");

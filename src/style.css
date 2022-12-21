@@ -1,27 +1,31 @@
 body {
   margin: 30px auto;
- padding:0;
+  padding: 0;
   color: #4b0082;
   font-family: "Poppins", sans-serif;
   max-width: 600px;
-
-
-
 }
 .container {
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 15px;
- background-image: url("../images/17.jpg");
+  background-image: url("../images/17.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-
-
 }
-#temperature-description{
+.dark .container {
+  background-image: url("../images/19.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.dark .body {
+  color: aliceblue;
+}
+
+#temperature-description {
   text-align: center;
-  display:block;
-  position:relative;
-  top:50px;
+  display: block;
+  position: relative;
+  top: 50px;
   text-transform: capitalize;
 }
 #city-input {
@@ -61,37 +65,34 @@ h3:hover {
 #temperature {
   font-size: 64px;
   font-weight: 400;
-  position:relative;
-  left:-15px;
+  position: relative;
+  left: -15px;
   transition: all 200ms ease-in-out;
 }
 #icon {
-  position:relative ;
+  position: relative;
   top: -20px;
-  
 }
 .main-temp {
   text-align: center;
   margin: 0;
-  padding:0;
+  padding: 0;
   max-height: 30px;
-  
 }
 .main-temp:hover {
   color: #4b0082;
-  
 }
 .units {
   position: relative;
   font-size: 16px;
   top: -32px;
-  left:-20px;
+  left: -20px;
 }
-.main-temp .active{
-  color:#4b0082;
+.main-temp .active {
+  color: #4b0082;
   cursor: default;
 }
-.main-temp .active:hover{
+.main-temp .active:hover {
   text-decoration: none;
 }
 #date {
@@ -103,10 +104,8 @@ a {
   text-decoration: none;
 }
 .indicators {
-  display:block;
+  display: block;
   text-align: right;
-
- 
 }
 li {
   font-size: 16px;
@@ -119,13 +118,13 @@ li {
 li:hover {
   color: #4b0082;
 }
-li:first-letter{
+li:first-letter {
   text-transform: capitalize;
 }
 .toggle-button {
   -webkit-appearance: none;
   position: relative;
-  top:40px;
+  top: 40px;
   width: 50px;
   height: 30px;
   background: #ccc;
@@ -182,7 +181,7 @@ button:hover {
   border-radius: 10px;
   margin: 5px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
-  font-size: 18px;
+  font-size: 16px;
   transition: all 200ms ease-in-out;
 }
 
