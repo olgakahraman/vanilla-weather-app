@@ -16,9 +16,20 @@ body {
   background-image: url("../images/19.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-}
-.dark .body {
   color: aliceblue;
+
+}
+.dark .day {
+   background: rgba(255, 255, 255, 0.2);
+  
+}
+.dark a:hover {
+  text-decoration: underline;
+}
+.dark .day:hover {
+  transform: scale(1.2);
+  color: white;
+  font-weight: bold;
 }
 
 #temperature-description {
@@ -53,15 +64,7 @@ h1 {
   font-family: "Yeseva One", cursive;
   text-transform: capitalize;
 }
-h1:hover {
-  color: #4b0082;
-}
-h3 {
-  transition: all 200ms ease-in-out;
-}
-h3:hover {
-  color: #4b0082;
-}
+
 #temperature {
   font-size: 64px;
   font-weight: 400;
@@ -79,9 +82,7 @@ h3:hover {
   padding: 0;
   max-height: 30px;
 }
-.main-temp:hover {
-  color: #4b0082;
-}
+
 .units {
   position: relative;
   font-size: 16px;
@@ -115,9 +116,7 @@ li {
   list-style: none;
   transition: all 200ms ease-in-out;
 }
-li:hover {
-  color: #4b0082;
-}
+
 li:first-letter {
   text-transform: capitalize;
 }

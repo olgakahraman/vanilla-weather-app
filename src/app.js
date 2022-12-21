@@ -141,7 +141,7 @@ function showCelciusTemperature(event) {
   temperatureElement.innerHTML = Math.round(celciusTemperature);
 }
 function changeThemeByTime() {
-  let body = querySelector("body");
+  let body = document.querySelector("body");
   let day = new Date();
   let night = day.getHours();
   if (night >= 13 || night < 6) {
