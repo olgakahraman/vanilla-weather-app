@@ -144,13 +144,12 @@ function changeThemeByTime() {
   let body = querySelector("body");
   let day = new Date();
   let night = day.getHours();
-  if (night >= 18 || night < 6) {
+  if (night >= 13 || night < 6) {
     body.classList.add("dark");
   } else {
     body.classList.remove("dark");
   }
 }
-
 
 let cityForm = document.querySelector("#city-form");
 cityForm.addEventListener("submit", handlesubmit);
