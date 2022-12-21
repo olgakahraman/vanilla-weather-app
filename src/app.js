@@ -33,7 +33,7 @@ function displayForecast(response) {
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
     console.log(forecastDay);
-    if (index < 6) {
+    if (index < 7) {
       forecastHTML =
         forecastHTML +
         `<div class="col day">
@@ -144,7 +144,7 @@ function changeThemeByTime() {
   let body = document.querySelector("body");
   let day = new Date();
   let night = day.getHours();
-  if (night >= 13 || night < 6) {
+  if (night >= 18 || night < 6) {
     body.classList.add("dark");
   } else {
     body.classList.remove("dark");

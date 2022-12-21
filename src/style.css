@@ -29,7 +29,7 @@ body {
 .dark .day:hover {
   transform: scale(1.2);
   color: white;
-  font-weight: bold;
+  
 }
 
 #temperature-description {
