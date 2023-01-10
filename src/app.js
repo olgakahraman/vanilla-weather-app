@@ -43,7 +43,7 @@ function displayForecast(response) {
            forecastDay.condition.icon
          }.png";
          alt=""
-         width="42"
+         width="82"
        />
        <div class="weather-forecast-temp">
          <span class="weather-forecast-temp-min">${Math.round(

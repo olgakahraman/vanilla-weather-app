@@ -1,9 +1,9 @@
 body {
-  margin: 30px auto;
-  padding: 0;
+  
+  font-family: "Open Sans", sans-serif;
   color: #4b0082;
-  font-family: "Poppins", sans-serif;
-  max-width: 600px;
+max-width: 800px;
+  
 }
 .container {
   border: 2px solid rgba(255, 255, 255, 0.2);
@@ -11,17 +11,19 @@ body {
   background-image: url("../images/17.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  padding-left: 50px;
+  padding-right: 50px;
+  
 }
+
 .dark .container {
   background-image: url("../images/19.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  color: aliceblue;
-
+  color: white;
 }
 .dark .day {
-   background: rgba(255, 255, 255, 0.2);
-  
+  background: rgba(255, 255, 255, 0.2);
 }
 .dark a:hover {
   text-decoration: underline;
@@ -29,17 +31,10 @@ body {
 .dark .day:hover {
   transform: scale(1.2);
   color: white;
-  
 }
 
-#temperature-description {
-  text-align: center;
-  display: block;
-  position: relative;
-  top: 50px;
-  text-transform: capitalize;
-}
 #city-input {
+  margin:20px;
   border-radius: 20px;
   padding: 3px 9px;
   border: none;
@@ -57,109 +52,92 @@ body {
   color: white;
 }
 h1 {
-  font-size: 30px;
-  transition: all 200ms ease-in-out;
+  font-size: 50px;
+  text-align: center;
   line-height: 28px;
-  margin-top: 50px;
-  font-family: "Yeseva One", cursive;
+  margin-top: 40px;
+ 
   text-transform: capitalize;
 }
 
+#date {
+  font-size: 20px;
+  
+  text-align: center;
+}
+
 #temperature {
-  font-size: 64px;
-  font-weight: 400;
+  font-size: 85px;
+  font-weight: bold;
   position: relative;
   left: -15px;
-  transition: all 200ms ease-in-out;
+  
 }
 #icon {
   position: relative;
-  top: -20px;
+  top: -30px;
 }
 .main-temp {
   text-align: center;
   margin: 0;
   padding: 0;
-  max-height: 30px;
+  
 }
 
 .units {
   position: relative;
   font-size: 16px;
-  top: -32px;
+  top: -52px;
   left: -20px;
 }
 .main-temp .active {
-  color: #4b0082;
+  font-weight: bold;
   cursor: default;
+  font-size: 25px;
 }
 .main-temp .active:hover {
   text-decoration: none;
+  color: #4b0082;
 }
-#date {
-  font-size: 20px;
-  margin-top: 0px;
-}
+
 a {
   color: white;
   text-decoration: none;
 }
+a:hover {
+  color: #4b0082;
+  text-decoration: none;
+}
 .indicators {
   display: block;
-  text-align: right;
+  text-align: center;
+  text-transform: capitalize;
+ 
+  
 }
 li {
-  font-size: 16px;
+  font-size: 19px;
   font-weight: 100;
-  height: 19px;
-  line-height: 1;
+margin:0 auto;
   list-style: none;
-  transition: all 200ms ease-in-out;
 }
 
 li:first-letter {
   text-transform: capitalize;
 }
-.toggle-button {
-  -webkit-appearance: none;
-  position: relative;
-  top: 40px;
-  width: 50px;
-  height: 30px;
-  background: #ccc;
-  border-radius: 25px;
-  transition: background 0.3s;
-  outline: none;
-  cursor: pointer;
+ul{
+  padding:0;
 }
 
-.toggle-button::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  border-radius: 50px;
-  width: 1.25rem;
-  height: 1.25rem;
-  transition: left 0.3s;
-
-  background-color: white;
-}
-.toggle-button:checked::after {
-  left: 70%;
-}
-.toggle-button:checked {
-  background-color: #4b0082;
-}
 button {
   background: rgba(255, 255, 255, 0.2);
   color: white;
   border: none;
   font-size: 20px;
-  padding: 3px 9px;
+  padding: 0 4px;
   border-radius: 100px;
-
+  position: relative;
+  top: 2px;
   transition: all 200ms ease-in-out;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
@@ -168,7 +146,7 @@ button:hover {
   color: #4b0082;
 }
 .city-form {
-  text-align: end;
+  text-align: center;
   top: 20px;
   position: relative;
 }
@@ -180,7 +158,7 @@ button:hover {
   border-radius: 10px;
   margin: 5px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
-  font-size: 16px;
+  font-size: 19px;
   transition: all 200ms ease-in-out;
 }
 
@@ -190,5 +168,5 @@ button:hover {
 }
 footer {
   margin-top: 20px;
-  text-align: end;
+  text-align: center;
 }
