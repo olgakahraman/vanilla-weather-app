@@ -155,7 +155,7 @@ button:hover {
   color: #4b0082;
 }
 .city-form {
-  text-align: end;
+  text-align: center;
   top: 20px;
   position: relative;
 }
@@ -178,4 +178,20 @@ button:hover {
 footer {
   margin-top: 20px;
   text-align: center;
+}
+@media(max-width:500px){
+  h1{
+    font-size: 45px;
+  }
+  #temperature{
+    font-size: 70px;
+    
+  }
+  li{
+    font-size: 15px;
+  }
+  .main-temp{
+    position:relative;
+    left:20px;
+  }
 }
