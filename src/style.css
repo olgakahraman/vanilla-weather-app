@@ -13,7 +13,7 @@ body {
   background-repeat: no-repeat;
   padding-left: 50px;
   padding-right: 50px;
-  max-width: 800px;
+  max-width: 900px;
 }
 
 .dark .container {
@@ -60,7 +60,7 @@ body {
   padding:0 0;
 }
 h1 {
-  font-size: 50px;
+  font-size: 70px;
   
   line-height: 28px;
   margin-top: 70px;
@@ -70,7 +70,7 @@ h1 {
 
 #date {
   font-size: 20px;
-  
+  margin: 20px 0;
   
 }
 
