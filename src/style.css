@@ -177,8 +177,12 @@ button:hover {
 }
 footer {
   margin-top: 20px;
-  text-align: center;
+  display: block;
+  text-align: end;
+ 
+
 }
+
 @media(max-width:500px){
   h1{
     font-size: 45px;
