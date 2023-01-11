@@ -155,7 +155,7 @@ button:hover {
   color: #4b0082;
 }
 .city-form {
-  text-align: center;
+  text-align: end;
   top: 20px;
   position: relative;
 }
