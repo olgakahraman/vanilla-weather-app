@@ -1,9 +1,7 @@
 body {
-  margin:30px auto;
+  margin: 30px auto;
   font-family: "Open Sans", sans-serif;
   color: #4b0082;
-
-  
 }
 .container {
   border: 2px solid rgba(255, 255, 255, 0.2);
@@ -25,8 +23,8 @@ body {
 .dark .day {
   background: rgba(255, 255, 255, 0.2);
 }
-.dark a{
-  color:white;
+.dark a {
+  color: white;
 }
 .dark a:hover {
   text-decoration: underline;
@@ -36,9 +34,7 @@ body {
   color: white;
 }
 
-
 #city-input {
-  
   border-radius: 20px;
   padding: 6px 9px;
   border: none;
@@ -56,22 +52,21 @@ body {
   background: #4b0082;
   color: white;
 }
-.col{
-  padding:0 0;
+.col {
+  padding: 0 0;
 }
 h1 {
   font-size: 70px;
-  
+
   line-height: 28px;
   margin-top: 70px;
- 
+
   text-transform: capitalize;
 }
 
 #date {
   font-size: 20px;
   margin: 20px 0;
-  
 }
 
 #temperature {
@@ -79,19 +74,15 @@ h1 {
   font-weight: bold;
   position: relative;
   left: -15px;
-  
 }
 #icon {
   position: relative;
   top: -30px;
 }
 .main-temp {
- 
   margin: 0;
   padding: 0;
-  
 }
-
 
 .units {
   position: relative;
@@ -119,23 +110,21 @@ a:hover {
 }
 .indicators {
   display: block;
-  text-align:end;
+  text-align: end;
   text-transform: capitalize;
- 
-  
 }
 li {
   font-size: 19px;
   font-weight: 100;
-margin:0 auto;
+  margin: 0 auto;
   list-style: none;
 }
 
 li:first-letter {
   text-transform: capitalize;
 }
-ul{
-  padding:0;
+ul {
+  padding: 0;
 }
 
 button {
@@ -179,23 +168,20 @@ footer {
   margin-top: 20px;
   display: block;
   text-align: end;
- 
-
 }
 
-@media(max-width:500px){
-  h1{
+@media (max-width: 500px) {
+  h1 {
     font-size: 45px;
   }
-  #temperature{
+  #temperature {
     font-size: 70px;
-    
   }
-  li{
+  li {
     font-size: 15px;
   }
-  .main-temp{
-    position:relative;
-    left:20px;
+  .main-temp {
+    position: relative;
+    left: 20px;
   }
 }
